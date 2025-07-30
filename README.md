@@ -15,25 +15,6 @@ Interface gráfica de uma calculadora simples, desenvolvida em Python 3 utilizan
 
 ---
 
-📁 Estrutura do Projeto
-
-├── calculadora-python<br>
-|   ├── venv                               # Ambiente virtual<br>
-|   ├── src/<br>
-|   |   ├── calculadora/<br>
-|   |       ├── Calculadora.py             # Código principal da interface gráfica<br>
-|   ├── tests/<br>
-|   |   ├── src/<br>
-|   |       ├── calculadora/<br>
-|   |           ├── TestCalculadora.py     # Testes automatizados com unittest<br>
-|   ├── gitignore<br>
-|   ├── app.py                             # Arquivo principal<br>
-|   ├── LICENSE<br>
-|   ├── README.md<br>                      # Documentação do projeto
-|   ├── requirements.txt                   # Arquivo de dependências<br>
-
----
-
 ## Ferramentas utilizadas
 
 - Python 3.9.13
