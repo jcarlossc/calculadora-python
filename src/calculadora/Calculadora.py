@@ -1,7 +1,17 @@
 import tkinter as tk
 
 class Calculadora:
+    """
+    Uma calculadora gráfica simples desenvolvida com Tkinter.
+
+    A interface permite realizar operações matemáticas básicas (adição, subtração,
+    multiplicação e divisão).
+    """
     def __init__(self) -> None:
+        """
+        Inicializa a janela principal da calculadora com título, tamanho fixo, cor
+        e campo de expressão matemática vinculado a uma StringVar.
+        """
         self.janela = tk.Tk()
         self.janela.title("Calculadora Python")
         self.janela.config(bg="#3c3c3d")
@@ -10,6 +20,18 @@ class Calculadora:
         self.expressao_numerica = tk.StringVar()
 
     def criar_interface(self) -> None:
+        """
+        Cria e exibe a interface gráfica da calculadora com botões numéricos,
+        operadores (+, -, *, /), ponto decimal, botão de limpar e botão de calcular (=).
+
+        A função define também os callbacks dos botões:
+        - clicar(botao): concatena o valor clicado à expressão atual.
+        - calcular(): avalia a expressão e exibe o resultado ou "Erro".
+        - limpar(): apaga a expressão atual.
+
+        Retorna:
+            None. Apenas mantém a janela ativa com o laço principal (mainloop).
+        """
         def clicar(botao):
             atual = self.expressao_numerica.get()
             self.expressao_numerica.set(atual + botao)
@@ -85,6 +107,15 @@ class Calculadora:
         return self.janela.mainloop()
     
     def avaliar_expressao(self, expressao: str) -> str:
+        """
+        Avalia a expressão matemática recebida como string.
+        
+        Args:
+            expressao (str): Expressão numérica em forma de string.
+
+        Returns:
+            str: Resultado da expressão, ou "Erro" caso falhe.
+        """
         try:
             resultado = eval(expressao)
             return str(resultado)
